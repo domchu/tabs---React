@@ -22,13 +22,20 @@ function App() {
 
   if (loading) {
     return (
-      <section className="section">
+      <section className="section loading">
         <h1>Loading...</h1>
       </section>
     );
   }
-
-  return <h2>Jobs</h2>;
+  const { company, dates, title, duties } = jobs[value];
+  return (
+    <section className="section">
+      <div className="title">
+        <h2>Experience</h2>
+        <div className="underline"></div>
+      </div>
+    </section>
+  );
 }
 
 export default App;
